@@ -1,0 +1,21 @@
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header   nav-style">
+            <mat-icon class="icon-top" aria-hidden="false" aria-label="Example home icon" routerLink="">home</mat-icon>
+            <!-- <p-dropdown class=" right" [options]="dropdown" >+</p-dropdown> -->
+
+        </div>
+        <div class="nav navbar-nav navbar-right">
+            <button class="threeDots" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon class="icon-top">more_vert</mat-icon>
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="howToUse()">How to use?</button>
+                <button mat-menu-item (click)="reportToDev()">Report to Developers</button>
+                <button mat-menu-item (click)="openReleaseNotes()">Release Notes</button>
+
+            </mat-menu>
+        </div>
+
+    </div>
+</div>

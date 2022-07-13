@@ -1,1 +1,38 @@
 <p>truth-or-dare works!</p>
+
+
+<form [formGroup] = "gameForm">
+    <!-- <div class="container row">
+    <span>        
+    <label>Name:</label>
+    <input class="form-control" id="name" (input)="nameInput($event)" type="text">
+    <button class="pull-right" (click)="onAdd()">Add</button>
+    </span>
+    </div>
+
+    <div>
+        <button type="submit" class="submit-button" (click)="onSubmit()">Submit</button>
+    </div> -->
+    <div  *ngFor="let i of nameList; let x = index">
+    <label>{{x+1}}.Name:</label>
+    <mat-form-field class="example-full-width" appearance="fill">
+        
+        <!-- <mat-label>Name</mat-label> -->
+        <input matInput (input)="nameInput($event)" placeholder="Enter the name" value="">
+        <button class="pull-right" (click)="onAdd()">Add</button>
+      </mat-form-field>
+    </div>
+
+      <div>
+        <button type="submit" class="submit-button" (click)="onSubmit()">Submit</button>
+    </div>
+    
+
+   
+</form>
+
+<!-- 
+<div *ngFor="let item of arraycount">
+    <input id="id_{{item.id}}" />
+    <button type="button" (click)="printValue('id_'+item.id)"> buton {{item.id}}   </button>
+  </div> -->

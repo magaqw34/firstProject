@@ -1,0 +1,18 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .space {
+    width: 4px;
+    height: auto;
+    display: inline-block;
+  }
+  .button-height{
+    line-height: 0.9;
+  }
+  

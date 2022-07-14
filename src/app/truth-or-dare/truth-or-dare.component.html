@@ -1,1 +1,35 @@
-<p>truth-or-dare works!</p>
+<div class="conatiner">
+    <form >
+        <div *ngFor="let player of playerCount;let i=index" style="margin-bottom:4px ;">
+            <label style="margin-left: 10px;" >Player {{i+1}}:</label>&nbsp;
+            <input 
+                type="text" 
+                name="playerName"
+                (input)="getName($event)"
+                 >
+            <div class="space"></div>
+            <button 
+                type="button" 
+                class="btn btn-success button-height" 
+                (click)="addPlayers()"
+                *ngIf="player==counter"
+                >Add
+            </button>
+            <div class="space"></div>
+            <button 
+                class="btn btn-primary button-height" 
+                (click)="editPlayer(i)"
+                *ngIf="player!==counter"
+                >Edit
+            </button>
+            <div class="space"></div>
+            <button 
+                class="btn btn-danger button-height" 
+                (click)="deletePlayer(i)"
+                *ngIf="player!==counter"
+                >Delete
+            </button>
+            {{i}}
+        </div>                
+    </form>
+</div>

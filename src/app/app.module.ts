@@ -13,6 +13,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import { ListOfGamesComponent } from './list-of-games/list-of-games.component';
 import { TruthOrDareComponent } from './truth-or-dare/truth-or-dare.component';
 import { SecretSantaComponent } from './secret-santa/secret-santa.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SecretSantaComponent } from './secret-santa/secret-santa.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
